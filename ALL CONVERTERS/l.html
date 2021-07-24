@@ -1,0 +1,145 @@
+<html>
+	<head>
+		<title>bootstrap</title>
+		
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    		<meta charset="utf-8">
+	                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<style>
+		body{background:#DFF0D8;}
+		.A{height:100px; background:currency_btn.jpg;}
+		.menu{background:#F2DEDE;}
+		
+		
+
+		.img{
+			height:100px;
+		}
+		
+	</style>
+	<body>
+		<div class="container">
+		<div class="row">	
+		
+		<nav class="navbar navbar-inverse menu">
+  <div class="">
+    <div class="navbar-header"><div class="col-md-4 col-xs-4"><img src="logo.jpg" height="50px" width="50px" class="img-circle"></div>
+		 <div class="col-md-6 col-xs-4"><h4 class="text-center">START BOOSTRAP</h4></div>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button> </div>
+	
+   
+   <div class="col-md-4 col-xs-4"> <div class="collapse navbar-collapse" id="myNavbar" >
+      		<ul class="nav navbar-nav"">
+        <li ><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li> 
+        <li><a href="credits.html">Credits</a></li> 
+
+
+
+      </ul>
+  	
+    </div></div>
+  </div>
+</nav>
+</div>
+		<div class=" body">
+			<div class="row">
+<center>
+<h2>Length Converter</h2>
+
+<form name="length_con">
+
+<table>
+
+	<tr>
+		<td></td>
+
+		<td>
+			<select name=from_unit onChange="convert_unit()";>
+			<option> centimeters
+			<option> meters
+			<option> kilometers
+			<option> miles
+			<option> inches
+			<option> feet
+			
+			</select>
+
+		</td>
+		<td>  to </td>
+		<td>
+			<select name=to_unit onChange="convert_unit()";>
+			<option> centimeters
+			<option> meters
+			<option> kilometers
+			<option> miles
+			<option> inches
+			<option> feet
+			
+			</select>
+
+		</td>
+	</tr>
+	<tr>
+		<td> </td><td colspan="3"><div id="formula">centimeters = 1 centimeters</div></td>
+	</tr>
+
+	<tr>
+		<td colspan="4"> </td>
+	</tr>
+
+	<tr>
+		<td> </td>
+		<td><input type="text" name="from_value" value="1" size="12" maxlength="12"></td>
+		<td> <input type=button value="convert" onClick="convert_unit()";> </td>
+		<td><div id="to_value">1</div></td>
+	</tr>
+
+	
+
+
+</table>
+
+</form>
+</center>			</div>
+		</div>
+
+	</body>
+</html>
+
+<script type="text/javascript">
+var centimeters = new Array(1, 0.01, 0.00001, 0.00000621, 0.3937, 0.0328, 0.01094);
+var meters= new Array(100, 1, 0.001, 0.000621, 39.37, 3.28,  1.094);
+var kilometers= new Array(100000, 1000, 1, 0.621, 39370, 3280, 1094);
+var miles= new Array(160934, 1609.34, 1.60934, 1, 63360, 5280,1760);
+var inches = new Array(2.54, 0.0254, 0.0000254, 0.0000158, 1, 0.08333, 0.02778);
+var feet = new Array(30.48, 0.3048, 0.0003048, 0.0001896, 12, 1, 0.3333);
+
+var factors = new Array(centimeters,meters,kilometers,miles,inches,feet);
+
+function convert_unit()
+{
+	from_index = document.length_con.from_unit.selectedIndex;
+	to_index = document.length_con.to_unit.selectedIndex;
+	factor = factors[from_index][to_index];
+	document.getElementById("formula").innerHTML = document.length_con.from_unit.options[document.length_con.from_unit.selectedIndex].text + " = " + factor + " " + document.length_con.to_unit.options[document.length_con.to_unit.selectedIndex].text;
+	if(isNaN(document.length_con.from_value.value))
+		document.getElementById("to_value").innerHTML = "Not a valid number.";
+	else
+		document.getElementById("to_value").innerHTML = factor * document.length_con.from_value.value;
+}
+</script>

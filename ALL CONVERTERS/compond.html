@@ -1,0 +1,124 @@
+<html>
+	<head>
+		<title>Compound Interest</title>
+		
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    		<meta charset="utf-8">
+	                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Web App for Compound Interest Calculation</title>
+
+<script>
+            function calculate()
+            {
+                p = document.getElementById("p").value;
+                n = document.getElementById("n").value; // no. of compoundings per year
+                t = document.getElementById("t").value; // no. of years
+                r = document.getElementById("r").value;
+                result = document.getElementById("result");
+
+                // The equation is A = p * [[1 + (r/n)] ^ nt]
+                A = (p* Math.pow((1 + (r/(n*100))), (n*t)));
+
+                // toFixed is used for rounding the amount with two decimal places.
+result.innerHTML = "The total amount is " + A.toFixed(2);
+
+result.innerHTML += "<br> The interest is " + (A.toFixed(2) - p).toFixed(2);
+            }
+</script>
+</head>
+
+
+	<style>
+		body{background:#DFF0D8;}
+		.A{height:100px; background:currency_btn.jpg;}
+		.menu{background:#F2DEDE;}
+		
+		
+
+		.img{
+			height:100px;
+		}
+		
+	</style>
+
+		
+	<body>
+		<div class="container">
+		<div class="row">	
+		
+		<nav class="navbar navbar-inverse menu">
+  <div class="">
+    <div class="navbar-header"><div class="col-md-4 col-xs-4"><img src="logo.jpg" height="50px" width="50px" class="img-circle"></div>
+		 <div class="col-md-6 col-xs-4"><h4 class="text-center">START BOOSTRAP</h4></div>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button> </div>
+	
+   
+   <div class="col-md-4 col-xs-4"> <div class="collapse navbar-collapse" id="myNavbar" >
+      		<ul class="nav navbar-nav"">
+        <li ><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li> 
+        <li><a href="credits.html">Credits</a></li> 
+
+
+
+      </ul>
+  	
+    </div></div>
+  </div>
+</nav>
+</div>
+		<div class=" body">
+			<div class="row">
+				
+<h1>Compound Interest Calculation</h1>
+<div class="row">
+	<div class="form-group col-md-3 col-xs-6">
+<label>Amount: </label><input  class="form-control" id="p">
+</div>
+</div>
+<div class="row">
+	<div class="form-group col-md-3 col-xs-6">
+<div><label>Rate (%): </label><input  class="form-control" id="r"></div>
+</div>
+</div>
+<div class="row">
+	<div class="form-group col-md-3 col-xs-6">
+<div><label>No. of Years: </label><input   class="form-control" id="t"></div>
+</div>
+</div>
+<div class="row">
+	<div class="form-group col-md-3 col-xs-6">
+<div><label>Compunding Times Per Year: </label><input  class="form-control" id="n" value="1"></div>
+</div>
+</div>
+<button onclick="calculate()" class="btn btn-success">Calculate</button><br>
+
+<h2 id="result"></h2>
+
+	</body>
+</html>
+
+
+
+<html>
+<head>
+
+</head>
+
+<body>
+
+</body>
+</html>

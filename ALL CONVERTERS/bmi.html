@@ -1,0 +1,158 @@
+<html>
+	<head>
+		<title>B M I</title>
+		
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    		<meta charset="utf-8">
+	                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<style>
+		body{background:#DFF0D8;}
+		.A{height:100px;}
+		.menu{background:#F2DEDE;}
+		
+		
+
+		.img{
+			height:100px;
+		}
+		
+	</style>
+	<body>
+		<div class="container">
+		<div class="row">	
+		
+		<nav class="navbar navbar-inverse menu">
+  <div class="">
+    <div class="navbar-header"><div class="col-md-4 col-xs-4"><img src="logo.jpg" height="50px" width="50px" class="img-circle"></div>
+		 <div class="col-md-6 col-xs-4"><h4 class="text-center">START BOOSTRAP</h4></div>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button> </div>
+	
+   
+   <div class="col-md-4 col-xs-4"> <div class="collapse navbar-collapse" id="myNavbar" >
+      		<ul class="nav navbar-nav"">
+        <li ><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li> 
+        <li><a href="credits.html">Credits</a></li> 
+
+
+
+      </ul>
+  	
+    </div></div>
+  </div>
+</nav>
+</div>
+		<div class=" body">
+			<div class="row">
+
+			<div class="back_button">
+				<a href="index.html"  role="button"><img src="back.png"></a>
+			</div>
+
+
+			<div class="row">
+
+				<center> <h1>B M I calculator</h1> </center>
+
+			</div>
+
+			
+			<div class="row">
+
+						<div class="col-md-2 col-xs-12">
+							 <label> HEIGHT (in centi-meters):</label>
+						</div>
+
+						<div class="col-md-2 col-xs-6">
+
+
+							<div class="form-group ">
+  								<input type="text" class="form-control" id="height" name="height" required autofocus>
+							</div>
+						</div>
+			</div>
+			<div class="row">
+						<div class="col-md-2 col-xs-12">
+							 <label> WEIGHT (in kilograms):</label>
+						</div>
+
+						<div class="col-md-2 col-xs-6">
+
+							<div class="form-group ">
+  								<input type="text" class="form-control" id="weight" name="weight" required autofocus>
+							</div>
+							
+						</div>
+			</div>
+
+			<div class="row">
+						<div class="col-md-4 col-xs-12">
+							<button onclick="sample()" class="btn btn-success">calculate bmi</button>
+						</div>
+			</div>			
+					
+		
+			<center>
+			<p id="print"></p>
+			</center>
+
+
+		</div>
+
+
+			</div>
+		</div>
+
+	</body>
+</html>
+
+	<script type="text/javascript">
+		function sample() {
+			// body...
+		//	alert("alert working");
+			var h=document.getElementById('height').value;
+			var w=document.getElementById('weight').value;
+			var bmi=(w/(h*h))*10000;
+			var under="oops! you are underweight ";
+			var fit="congrats ... you are fit ";
+			var slight=" you are slightly over weight ";
+			var over="you are obese plase take care ";
+
+
+				if (bmi<=18.5) {
+					document.getElementById('print').innerHTML=under;
+				}
+				else if (bmi>=18.5 && bmi <=24.9){
+					document.getElementById('print').innerHTML=fit;
+				}
+				else if (bmi>=25 && bmi <=29){
+					document.getElementById('print').innerHTML=slight;
+				}
+				else if (bmi>=30){
+					document.getElementById('print').innerHTML=over;
+				}
+				else
+				{
+					document.getElementById('print').innerHTML="invalid values";
+				}
+
+		}
+	</script>
+
+
+
+

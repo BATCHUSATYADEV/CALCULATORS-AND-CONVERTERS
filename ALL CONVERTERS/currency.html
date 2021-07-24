@@ -1,0 +1,267 @@
+<html>
+	<head>
+		<title>currency converter</title>
+		
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    		<meta charset="utf-8">
+	                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<style>
+		body{background:#DFF0D8;}
+		.A{height:100px;}
+		.menu{background:#F2DEDE;}
+		
+		
+
+		.img{
+			height:100px;
+		}
+		
+	</style>
+	<body>
+		<div class="container">
+		<div class="row">	
+		
+		<nav class="navbar navbar-inverse menu">
+  <div class="">
+    <div class="navbar-header"><div class="col-md-4 col-xs-4"><img src="logo.jpg" height="50px" width="50px" class="img-circle"></div>
+		 <div class="col-md-6 col-xs-4"><h4 class="text-center">START BOOSTRAP</h4></div>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button> </div>
+	
+   
+   <div class="col-md-4 col-xs-4"> <div class="collapse navbar-collapse" id="myNavbar" >
+      		<ul class="nav navbar-nav"">
+         <li ><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li> 
+        <li><a href="credits.html">Credits</a></li> 
+
+
+
+      </ul>
+  	
+    </div></div>
+  </div>
+</nav>
+</div>
+	
+
+		<div class=" body">
+			<div class="row">
+
+				<center><h1>currency converter</h1></center>>
+
+				<h2>currency from :</h2>
+
+
+				<div class="form-group col-xs-3">
+
+				    <select class="form-control" id="from">
+					    <option  value="india">india</option>
+						<option  value="us">us</option>
+						<option  value="aus">australia</option>
+						<option  value="europe">europe</option>
+						<option  value="uae">uae</option>
+					  </select>
+				</div>
+
+				<div class="form-group col-xs-6 col-md-3">
+  						<input type="text" class="form-control" id="input">
+				</div>
+
+				<br>
+
+			</div>
+			<div class="row">
+					
+				<h2>currency To :</h2>
+
+				<div class="form-group col-xs-3" id="">
+
+				    <select class="form-control" id="to">
+					    <option  value="india">india</option>
+						<option  value="us">us</option>
+						<option  value="aus">australia</option>
+						<option  value="europe">europe</option>
+						<option  value="uae">uae</option>
+					  </select>					
+
+				</div>
+
+
+			</div>		
+
+			<div>	
+				<button onclick="convert()" class="btn btn-success">convert</button>
+			</div>
+
+
+			<h1 id="output"></h1>
+			
+		</div>
+</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	
+	function f() {
+
+		alert("hi");
+
+	}
+
+/*
+		var fromcountry=document.getElementById('from').value;
+		var amount=document.getElementById('input').value;
+		var tocountry=document.getElementById('to').value;
+		var result;
+
+		var fromcountry=document.getElementById('from').value;
+
+
+ 		var fromcountry=document.getElementsByClassName("example");
+ 		var amount;
+ 		var tocountry;
+ 		var result;
+*/
+function convert()
+	{
+
+		var fromcountry=document.getElementById('from').value;
+		var amount=document.getElementById('input').value;
+		var tocountry=document.getElementById('to').value;
+		var result;
+
+		if(fromcountry=="india" && tocountry=="us")
+		{
+
+			result=amount*0.014;
+
+		}
+
+		else if (fromcountry=="india" && tocountry=="aus") {
+			result=amount*0.019;	
+
+		}
+		else if (fromcountry=="india" && tocountry=="uae") {
+			result=amount*0.053;	
+			
+		}
+		else if (fromcountry=="india" && tocountry=="europe") {
+			result=amount*0.012;	
+			
+		}
+		else{
+		}
+
+
+
+		if(fromcountry=="us" && tocountry=="india")
+		{
+
+			result=amount*69.94;	
+		}
+
+		else if (fromcountry=="us" && tocountry=="aus") {
+			result=amount*1.36;			
+
+		}
+		else if (fromcountry=="us" && tocountry=="uae") {
+			result=amount*3.67;			
+			
+		}
+		else if (fromcountry=="us" && tocountry=="europe") {
+			result=amount*0.87;		
+			
+		}
+		else{
+
+		}
+
+
+
+		if(fromcountry=="aus" && tocountry=="india")
+		{
+
+			result=amount*51.32;		
+		}
+
+		else if (fromcountry=="aus" && tocountry=="us") {
+			result=amount*0.73;	
+
+		}
+		else if (fromcountry=="aus" && tocountry=="uae") {
+			result=amount*2.70;		
+			
+		}
+		else if (fromcountry=="aus" && tocountry=="europe") {
+			result=amount*0.63;	
+			
+		}
+		else{
+		}
+
+
+		if(fromcountry=="europe" && tocountry=="india")
+		{
+
+			result=amount*80.84;			
+		}
+
+		else if (fromcountry=="europe" && tocountry=="aus") {
+			result=amount*1.58;	
+
+		}
+		else if (fromcountry=="europe" && tocountry=="uae") {
+			result=amount*4.25;	
+			
+		}
+		else if (fromcountry=="europe" && tocountry=="us") {
+			result=amount*1.16;			
+			
+		}
+		else{
+		}
+
+
+		if(fromcountry=="uae" && tocountry=="us")
+		{
+
+			result=amount*0.27;	
+		}
+
+		else if (fromcountry=="uae" && tocountry=="aus") {
+			result=amount*0.37;	
+
+		}
+		else if (fromcountry=="uae" && tocountry=="india") {
+			result=amount*19.03;	
+			
+		}
+		else if (fromcountry=="uae" && tocountry=="europe") {
+			result=amount*0.24;		
+			
+		}
+		else{
+
+		}
+
+		document.getElementById('output').innerHTML=fromcountry +" " +amount +" = "+result+"  "+tocountry;
+
+	}
+
+
+</script>

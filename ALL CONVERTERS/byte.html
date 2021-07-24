@@ -1,0 +1,243 @@
+<html>
+	<head>
+		<title>bootstrap</title>
+		
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    		<meta charset="utf-8">
+	                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<script language="JavaScript">
+<!--
+function byteConverter(){
+document.converter.kb.value = document.converter.byte.value / 1024
+document.converter.mb.value = document.converter.byte.value / (1024*1024)
+document.converter.gb.value = document.converter.byte.value / (1024*1024*1024)
+document.converter.tb.value = document.converter.byte.value / (1024*1024*1024*1024)
+document.converter.pb.value = document.converter.byte.value / (1024*1024*1024*1024*1024)
+document.converter.Eb.value = document.converter.byte.value / (1024*1024*1024*1024*1024*1024)
+document.converter.Eb.value = document.converter.byte.value / (1024*1024*1024*1024*1024*1024*1024)
+}
+
+function kbConverter(){
+document.converter.byte.value = document.converter.kb.value * 1024
+document.converter.mb.value = document.converter.kb.value / 1024
+document.converter.gb.value = document.converter.kb.value / (1024*1024)
+document.converter.tb.value = document.converter.kb.value / (1024*1024*1024)
+document.converter.pb.value = document.converter.kb.value / (1024*1024*1024*1024)
+document.converter.Eb.value = document.converter.Kb.value / (1024*1024*1024*1024*1024)
+document.converter.Zb.value = document.converter.Kb.value / (1024*1024*1024*1024*1024*1024)
+}
+
+function mbConverter(){
+document.converter.byte.value = document.converter.mb.value * 1024 * 1024
+document.converter.kb.value = document.converter.mb.value * 1024
+document.converter.gb.value = document.converter.mb.value / 1024
+document.converter.tb.value = document.converter.mb.value / (1024*1024)
+document.converter.pb.value = document.converter.mb.value / (1024*1024*1024)
+document.converter.Eb.value = document.converter.mb.value / (1024*1024*1024*1024)
+document.converter.Zb.value = document.converter.mb.value / (1024*1024*1024*1024*1024)
+
+}
+function gbConverter(){
+document.converter.byte.value = document.converter.gb.value * 1024 * 1024 * 1024
+document.converter.kb.value = document.converter.gb.value * 1024 * 1024
+document.converter.mb.value = document.converter.gb.value * 1024
+document.converter.tb.value = document.converter.gb.value / 1024
+document.converter.pb.value = document.converter.gb.value / (1024*1024)
+document.converter.Eb.value = document.converter.gb.value / (1024*1024*1024)
+document.converter.Zb.value = document.converter.gb.value / (1024*1024*1024*1024)
+}
+function tbConverter(){
+document.converter.byte.value = document.converter.tb.value * 1024 * 1024 * 1024 *1024
+document.converter.kb.value = document.converter.tb.value * 1024 * 1024 *1024
+document.converter.mb.value = document.converter.tb.value * 1024 *1024
+document.converter.gb.value = document.converter.tb.value * 1024 
+document.converter.pb.value = document.converter.tb.value / 1024 
+document.converter.Eb.value = document.converter.tb.value / (1024*1024)
+document.converter.Zb.value = document.converter.tb.value / (1024*1024*1024)
+}
+function pbConverter(){
+document.converter.byte.value = document.converter.pb.value * 1024 * 1024 * 1024 *1024 *1024
+document.converter.kb.value = document.converter.pb.value * 1024 * 1024 *1024 *1024
+document.converter.mb.value = document.converter.pb.value * 1024 *1024 *1024
+document.converter.gb.value = document.converter.pb.value * 1024 *1024
+ document.converter.tb.value = document.converter.pb.value * 1024 
+ document.converter.Eb.value = document.converter.pb.value / 1024 
+ document.converter.Zb.value = document.converter.pb.value / (1024*1024)
+}
+function EbConverter(){
+document.converter.byte.value = document.converter.Eb.value * 1024 * 1024 * 1024 *1024 *1024*1024
+document.converter.kb.value = document.converter.Eb.value * 1024 * 1024 *1024 *1024 *1024
+document.converter.mb.value = document.converter.Eb.value * 1024 *1024 *1024 *1024
+document.converter.gb.value = document.converter.Eb.value * 1024 *1024 *1024
+ document.converter.tb.value = document.converter.Eb.value * 1024 *1024
+ document.converter.pb.value = document.converter.Eb.value * 1024 
+  document.converter.Zb.value = document.converter.Eb.value / 1024 
+}
+function ZbConverter(){
+document.converter.byte.value = document.converter.Zb.value * 1024 * 1024 * 1024 *1024 *1024 *1024 * 1024
+document.converter.kb.value = document.converter.Zb.value * 1024 * 1024 *1024 *1024 *1024 * 1024
+document.converter.mb.value = document.converter.Zb.value * 1024 *1024 *1024 *1024 * 1024
+document.converter.gb.value = document.converter.Zb.value * 1024 *1024 *1024 * 1024
+ document.converter.tb.value = document.converter.Zb.value * 1024 *1024 * 1024
+ document.converter.pb.value = document.converter.Zb.value * 1024 * 1024
+ document.converter.Eb.value = document.converter.Zb.value * 1024  
+}
+//-->
+</script>
+	
+	
+	
+	</head>
+	<style>
+		body{background:#DFF0D8;}
+		.A{height:200px;background:currency_btn.jpg;}
+		.menu{background:#F2DEDE;padding-top:5px;}
+		.new{background:black;}
+		.C{}
+		
+
+		.img{
+			height:200px;
+		}
+		.img:hover{-webkit-box-shadow: 0px 0px 80px 8px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 80px 8px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 80px 8px rgba(0,0,0,0.75);}
+		</style>
+	<body>
+		<div class="container">
+		<div class="row">	
+		
+		<nav class="navbar navbar-inverse menu">
+  <div class="">
+    <div class="navbar-header"><div class="col-md-4 col-xs-4"><img src="logo.jpg" height="50px" width="50px" class="img-circle"></div>
+		 <div class="col-md-6 col-xs-4"><h4 class="text-center">START BOOSTRAP</h4></div>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button> </div>
+	
+   
+   <div class="col-md-4 col-xs-12 "> <div class="collapse navbar-collapse " id="myNavbar" >
+      		<ul class="nav navbar-nav"">
+        <li class="new" ><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li> 
+        <li><a href="credits.html">Credits</a></li> 
+
+
+
+      </ul>
+  	
+    </div></div>
+  </div>
+</nav>
+</div>
+		<div class=" body">
+			<div class="row">
+					<h1>Byte Converter</h1>
+				<form name="converter">
+	<div class="row">
+	<div class="form-group col-md-3 col-xs-6">
+	Byte: <input type="text" name="byte" onChange="byteConverter()" class="form-control" />
+	</div>
+	</div>
+	<div class="row">
+	<div class="form-group col-md-3 col-xs-6">
+	KiloByte: <input type="text" name="kb" onChange="kbConverter()" class="form-control "/>
+	</div></div>
+	<div class="row">
+	<div class="form-group col-md-3 col-xs-6">
+	MegaByte: <input type="text" name="mb" onChange="mbConverter()" class="form-control " />
+	</div>
+	</div>
+	<div class="row">
+	<div class="form-group col-md-3 col-xs-6">
+	GigaByte: <input type="text" name="gb" onChange="gbConverter()" class="form-control "/>
+	</div>
+	</div>
+	<div class="row">
+	<div class="form-group col-md-3 col-xs-6">
+	TeraByte: <input type="text" name="tb" onChange="tbConverter()" class="form-control "/>
+	</div>
+	</div>
+	<div class="row">
+	<div class="form-group col-md-3 col-xs-6">
+		PetaByte: <input type="text" name="pb" onChange="pbConverter()" class="form-control "/>
+		</div></div>
+		<div class="row">
+	<div class="form-group col-md-3 col-xs-6">
+		ExaByte: <input type="text" name="Eb" onChange="EbConverter()" class="form-control "/>
+		</div></div>
+			<div class="row">
+	<div class="form-group col-md-3 col-xs-6">
+		ZetaByte: <input type="text" name="Zb" onChange="ZbConverter()" class="form-control "/>
+		</div></div>
+    <input type="button" value="Convert" class="btn btn-success" />
+	    <input type="reset" value="reset" class="btn btn-primary" />
+</form>
+
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
